@@ -1,3 +1,4 @@
+
 # Using Yearn
 
 Thanks to a feature called 'zap', it's extremely easy to deposit into any vault with almost any token.
@@ -12,7 +13,7 @@ First, **Connect your wallet** using the button at the top right corner. Multipl
 
 ## Yearn is multi-chain
 
-Our products are currently on Ethereum, Fantom, and Arbitrum with more to come.
+Our products are currently available on Ethereum, Fantom, and Arbitrum with more to come.
 
 Click on this button to select the network you would like to interact with:
 
@@ -84,7 +85,7 @@ When you're ready to withdraw:
   <img width="900" src="https://i.imgur.com/t0VEznT.png"/>
 </p>
 
-3. Select which asset you would like to receive upon withdrawal. Your options will be the ibJPY, ETH, BTC, DAI, USDC or USDT
+3. Select which asset you would like to receive upon withdrawal. Your options will be ibJPY, ETH, BTC, DAI, USDC or USDT
 4. Enter the amount you want to withdraw, or click 'Max' to withdraw the entire balance.
 5. Confirm the approval if needed, and then approve the withdrawal transaction.
 6. When your transaction succeeds, the tokens will show up in your wallet again
