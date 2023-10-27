@@ -1,3 +1,6 @@
+// @ts-check
+// Note: type annotations allow type checking and IDEs autocompletion
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 const math = require('remark-math')
 const katex = require('rehype-katex')
@@ -12,6 +15,10 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'yearn', // Usually your GitHub org/user name.
   projectName: 'yearn-devdocs', // Usually your repo name.
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
   themeConfig: {
     algolia: {
       apiKey: process.env.ALGOLIA_API_KEY || 'UNKNOWN',
@@ -35,6 +42,7 @@ module.exports = {
         content: 'https://github.com/yearn/yearn-devdocs'
       }
     ],
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     navbar: {
       hideOnScroll: true,
       title: 'Yearn Finance',
@@ -102,7 +110,7 @@ module.exports = {
           ],
         },
         {
-          title: 'Github',
+          title: 'GitHub',
           items: [
             {
               label: 'yearn-vaults',
@@ -189,10 +197,10 @@ module.exports = {
           rehypePlugins: [katex],
           routeBasePath: 'vaults',
           sidebarPath: require.resolve('./sidebars/sidebars.js'),
-          editUrl:
-            'https://github.com/yearn/yearn-devdocs/edit/master/website/',
-          includeCurrentVersion: false,
-          breadcrumbs: false,
+          editUrl: ({versionDocsDirPath, docPath}) =>
+          'https://github.com/yearn/yearn-devdocs/edit/master/website/${versionDocsDirPath}/${docPath}',
+          includeCurrentVersion: true,
+          breadcrumbs: true,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
